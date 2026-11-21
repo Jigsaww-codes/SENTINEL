@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-ink text-slate-200 font-sans antialiased; }
+.leaflet-container { background: #0a1224; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+.sentinel-ring { display:block; width:44px; height:44px; border-radius:50%; border:2px solid var(--c);
+  box-shadow: 0 0 12px var(--c); animation: ringpulse 1.8s ease-out infinite; }
+@keyframes ringpulse { 0% { transform: scale(.45); opacity: 1 } 100% { transform: scale(1.15); opacity: 0 } }
+.leaflet-popup-content-wrapper { border-radius: 8px; }
